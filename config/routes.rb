@@ -2,6 +2,10 @@ Curious::Application.routes.draw do
   root to: "pages#home"
   match '/about',   to: 'pages#about'
   match '/contact', to: 'pages#contact'
+  
+  # User paths.
+  match '/signup',  to: 'users#new'
+  
   resources :answers
   resources :questions
   resources :users
