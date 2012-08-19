@@ -1,14 +1,14 @@
 Curious::Application.routes.draw do
+  devise_for :users
+
   root to: "pages#home"
   match '/about',   to: 'pages#about'
   match '/contact', to: 'pages#contact'
   
   # User paths.
-  match '/signup',  to: 'users#new'
   
   resources :answers
   resources :questions
-  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
